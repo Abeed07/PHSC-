@@ -289,3 +289,14 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+
+.container h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px; /* Space between title and logos */
+  font-weight: bold;
+  color: #f9f9f9; /* Slightly lighter white for emphasis */
+  text-align: center; /* Ensure the title is centered */
+}
+
+
