@@ -30,6 +30,7 @@ body, html {
 
 .logo img {
   height: 80px;
+  transition: height 0.3s ease;
 }
 
 /* Video Section */
@@ -38,12 +39,17 @@ body, html {
   height: 100vh;
   object-fit: cover;
   z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
 }
 
 /* About Section */
 .about-club {
   background: #000000;
   color: white;
+  margin-top: 100vh; /* Push the about section below the video */
 }
 
 .about-club h2 {
@@ -64,6 +70,9 @@ body, html {
 }
 
 .event-gallery img {
+  width: 100%;
+  height: 200px; /* Ensure consistent height for all images */
+  object-fit: cover; /* Crop and cover the container */
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -98,4 +107,33 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  .logo img {
+    height: 60px; /* Adjust logo size on mobile */
+  }
+
+  .background-video {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .menu li {
+    font-size: 16px; /* Adjust menu font size on mobile */
+  }
+
+  .about-club h2 {
+    font-size: 2em;
+  }
+
+  .about-club p {
+    font-size: 1em;
+  }
+
+  /* Ensure the logo is visible */
+  .header {
+    padding: 10px 15px;
+  }
 }
