@@ -3,300 +3,99 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  height: 100%;
   background-color: black;
 }
 
-/* Video Section (Scrollable) */
-.background-video {
-  width: 100%;
-  height: 100vh; /* Make the video cover the entire screen height */
-  object-fit: cover; /* Ensure the video covers the full screen */
-  z-index: 0; /* Keep the video behind the content */
-}
-
-/* Header Section (Overlapping the video) */
+/* Header Section */
 .header {
-  position: fixed; /* Keeps the header fixed at the top of the screen */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  display: flex;
-  justify-content: center; /* Centers menu items horizontally */
-  align-items: center; /* Centers menu items vertically */
   padding: 10px 20px;
   background: rgba(0, 0, 0, 0.5);
   z-index: 10;
-  text-align: center; /* Ensure header text is centered */
-}
-
-.menu {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .menu li {
   color: white;
   font-size: 18px;
   cursor: pointer;
-  margin: 0 15px; /* Add horizontal spacing between menu items */
+  margin: 0 15px;
 }
 
 .menu li:hover {
   text-decoration: underline;
 }
 
-.logo {
-  margin: 0 20px; /* Adjust margin to position logo */
-}
-
 .logo img {
-  height: 100px;
+  height: 80px;
 }
 
-/* About the Club Section */
+/* Video Section */
+.background-video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* About Section */
 .about-club {
-  padding: 50px;
-  background: #000000; /* Light gray for a professional look */
-  color: #333;
-  text-align: center; /* Ensure the content is centered */
-  font-family: 'Arial', sans-serif;
+  background: #000000;
+  color: white;
 }
 
-.about-content h2 {
+.about-club h2 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  font-weight: bold;
-  color: #FFFFFF; /* Darker text for emphasis */
 }
 
-.about-content p {
+.about-club p {
   font-size: 1.2em;
-  line-height: 1.8;
-  margin: 0 auto 30px;
-  max-width: 800px; /* Restrict width for readability */
-  color: #FFFFFF;
+  max-width: 800px;
+  margin: 0 auto;
   text-align: justify;
 }
 
-.features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.feature {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  width: 300px;
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature h3 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  color: #FFFFFF; /* Classic blue for emphasis */
-}
-
-.feature p {
-  font-size: 1em;
-  color: #FFFFFF;
-}
-
-.feature:hover {
-  transform: translateY(-5px); /* Subtle lift on hover */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-}
-
-/* Event Gallery Section */
-.event-gallery {
-  padding: 50px;
-  text-align: center;
-  background: #000; /* Black background for contrast */
-  color: #fff; /* White text for readability */
-  font-family: 'Arial', sans-serif;
-}
-
+/* Event Gallery */
 .event-gallery h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  font-weight: bold;
-  color: #f9f9f9; /* Slightly lighter white for emphasis */
+  color: #f9f9f9;
 }
 
-.event-gallery .gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
-  gap: 20px;
-  justify-items: center; /* Ensure images are centered within their grid cells */
-  padding: 20px 0;
-}
-
-.event-gallery .gallery img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  max-height: 200px;
-  object-fit: cover;
+.event-gallery img {
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); /* Subtle white shadow for contrast */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.event-gallery .gallery img:hover {
-  transform: scale(1.05); /* Slight zoom effect */
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2); /* Enhanced white shadow on hover */
+.event-gallery img:hover {
+  transform: scale(1.05);
 }
 
-.event-gallery .more-btn {
-  display: inline-block;
+.event-gallery .btn {
   margin-top: 30px;
-  padding: 12px 30px;
-  font-size: 1.2em;
-  font-weight: 500;
-  color: #000; /* Black text for contrast */
-  background-color: #fff; /* White button for standout */
-  border-radius: 5px;
-  text-decoration: none;
-  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.3); /* Subtle white shadow */
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.event-gallery .more-btn:hover {
-  background-color: #e6e6e6; /* Light gray hover effect */
-  transform: translateY(-2px); /* Gentle lift */
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4); /* Enhanced white shadow on hover */
 }
 
 /* Affiliates Section */
-.affiliates-section {
-  display: flex;
-  flex-direction: column; /* Stack content vertically */
-  justify-content: center;
-  align-items: center;
-  background-color: #000; /* Black background */
-  padding: 50px 20px;
+.affiliates-section img {
+  transition: transform 0.3s ease;
 }
 
-.affiliates-section h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px; /* Space between title and logos */
-  font-weight: bold;
-  color: #f9f9f9; /* Slightly lighter white for emphasis */
-  text-align: center; /* Ensure the title is centered */
+.affiliates-section img:hover {
+  transform: scale(1.05);
 }
 
-.affiliates-section .gallery {
-  display: flex;
-  justify-content: center; /* Ensures logos are centered horizontally */
-  align-items: center; /* Centers logos vertically */
-  gap: 30px; /* Adjust space between logos */
-  flex-wrap: wrap; /* Allow logos to wrap if necessary */
-}
-
-.affiliates-section .affiliate-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 200px; /* Limit max width of each logo */
-  flex: 1;
-  padding: 10px;
-}
-
-.affiliates-section .affiliate-logo img {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.affiliates-section .affiliate-logo:hover img {
-  transform: scale(1.05); /* Slight zoom on hover */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-}
-
-/* Container */
-.container {
-  display: flex;
-  align-items: center; /* Vertically center the content */
-  justify-content: center; /* Horizontally center the content */
-  text-align: center; /* Ensure text is centered */
-}
-
-.video-wrapper {
-  margin-right: 20px; /* Adds space between the video and the text */
-}
-
-.video-wrapper video {
-  width: 100%;
-  max-width: 600px; /* Adjust the video width as needed */
-  border-radius: 10px;
-}
-
-.title-wrapper .title {
-  font-size: 4rem; /* Large text */
-  font-weight: bold;
-  color: red; /* Red color for "HMPV" */
-  margin: 0;
-}
-
-/* Footer Section */
+/* Footer */
 footer {
   background: #222;
   color: white;
-  text-align: center;
-  padding: 30px;
   font-size: 1rem;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-footer .footer-content {
-  margin-bottom: 20px;
 }
 
 footer a {
   color: #00bcd4;
-  text-decoration: none;
 }
 
 footer a:hover {
   text-decoration: underline;
 }
-
-footer .developer-info {
-  font-size: 0.9rem;
-  color: #bbb;
-  margin-top: 20px;
-  text-align: center; /* Ensure footer text is centered */
-}
-
-/* Ensuring all elements within footer links and logos are centered */
-footer a {
-  color: #00bcd4;
-  text-decoration: none;
-  text-align: center; /* Ensures footer links are centered */
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-
-.container h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px; /* Space between title and logos */
-  font-weight: bold;
-  color: #f9f9f9; /* Slightly lighter white for emphasis */
-  text-align: center; /* Ensure the title is centered */
-}
-
-
