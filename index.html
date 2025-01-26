@@ -4,23 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Public Health Club</title>
-  <link rel="stylesheet" href="styles.css">
   
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Header Section (Overlapping the video) -->
   <header class="header">
-    <ul class="menu">
-      <li>Home</li>
-      <li>About</li>
-    </ul>
-    <div class="logo">
-      <img src="logo.png" alt="Club Logo">
+    <div class="container d-flex justify-content-between align-items-center">
+      <ul class="menu list-unstyled d-flex">
+        <li class="mx-3">Home</li>
+        <li class="mx-3">About</li>
+      </ul>
+      <div class="logo">
+        <img src="logo.png" alt="Club Logo" class="img-fluid">
+      </div>
+      <ul class="menu list-unstyled d-flex">
+        <li class="mx-3">Events</li>
+        <li class="mx-3">Contact</li>
+      </ul>
     </div>
-    <ul class="menu">
-      <li>Events</li>
-      <li>Contact</li>
-    </ul>
   </header>
 
   <!-- Background Video Section (Scrollable) -->
@@ -29,126 +35,95 @@
     Your browser does not support the video tag.
   </video>
 
-
-
-
-
-
-
-
-
-
-
-<!-- About the Club Section -->
-<div class="about-club">
-  <div class="about-content">
-    <h2>About Public Heath & Sciences Club</h2>
-    <p>
-     The Public Health & Sciences Club is a vibrant community dedicated to fostering awareness about public health and inspiring curiosity in the sciences. Our mission is to empower students with knowledge, provide a platform for impactful initiatives, and cultivate a commitment to improving the well-being of our communities.
-
-Through engaging workshops and thought-provoking seminars, we bring students closer to pressing health topics, from mental health and disease prevention to nutrition and cutting-edge advancements in science. The club actively participates in community outreach programs, organizing health drives and awareness campaigns that create meaningful change at the grassroots level.
-
-Members of the club also have the opportunity to explore the intersection of science and health by engaging in research projects and collaborative discussions. These initiatives encourage innovative thinking and address global challenges through a multidisciplinary approach.
-
-By joining the Public Health & Sciences Club, students can connect with like-minded peers, professionals, and organizations, paving the way for personal and professional growth. The club nurtures leadership skills, teamwork, and a shared passion for health and science, creating a space where members can learn, grow, and make a tangible impact.
-
-Whether you aspire to a career in healthcare, are passionate about scientific discovery, or simply want to contribute to building a healthier world, the Public Health & Sciences Club welcomes you to be part of its journey. Together, we can create healthier communities and inspire positive change.
-    </p>
-    
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Event Gallery Section -->
-<div class="event-gallery">
-  <h2>Event Gallery</h2>
-  <div class="gallery">
-    <img src="Vitiligo.jpg" alt="Event 1">
-    <img src="Mental Health day.jpg" alt="Event 2">
-    <img src="diabetes.jpg" alt="Event 3">
-    <img src="posterintra.jpg" alt="Event 4">
-    <img src="socialWork.jpg" alt="Event 5">
-    <img src="dia.jpg" alt="Event 6">
-  </div>
-  <a href="#more-events" class="more-btn">More</a>
-</div>
-
-
-
-
-
-<div class="affiliates-section">
-  <h2>Affiliates</h2>
-  <div class="gallery">
-    <div class="affiliate-logo">
-      <img src="partner1.jpg" alt="Affiliate 1">
-    </div>
-    <div class="affiliate-logo">
-      <img src="partner2.jpg" alt="Affiliate 2">
-    </div>
-    <div class="affiliate-logo">
-      <img src="partner3.jpg" alt="Affiliate 3">
+  <!-- About the Club Section -->
+  <div class="about-club py-5">
+    <div class="container text-center">
+      <h2>About Public Health & Sciences Club</h2>
+      <p>
+        The Public Health & Sciences Club is a vibrant community dedicated to fostering awareness about public health and inspiring curiosity in the sciences. Our mission is to empower students with knowledge, provide a platform for impactful initiatives, and cultivate a commitment to improving the well-being of our communities.
+      </p>
     </div>
   </div>
-</div>
 
+  <!-- Event Gallery Section -->
+  <div class="event-gallery py-5">
+    <div class="container">
+      <h2 class="text-center">Event Gallery</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <img src="Vitiligo.jpg" alt="Event 1" class="img-fluid rounded">
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="Mental Health day.jpg" alt="Event 2" class="img-fluid rounded">
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="diabetes.jpg" alt="Event 3" class="img-fluid rounded">
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="posterintra.jpg" alt="Event 4" class="img-fluid rounded">
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="socialWork.jpg" alt="Event 5" class="img-fluid rounded">
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="dia.jpg" alt="Event 6" class="img-fluid rounded">
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="#more-events" class="btn btn-light">More</a>
+      </div>
+    </div>
+  </div>
 
+  <!-- Affiliates Section -->
+  <div class="affiliates-section py-5">
+    <div class="container text-center">
+      <h2>Affiliates</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-2 mb-3">
+          <img src="partner1.jpg" alt="Affiliate 1" class="img-fluid">
+        </div>
+        <div class="col-md-2 mb-3">
+          <img src="partner2.jpg" alt="Affiliate 2" class="img-fluid">
+        </div>
+        <div class="col-md-2 mb-3">
+          <img src="partner3.jpg" alt="Affiliate 3" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
 
-
-
-
-
-<div class="container">
-  <h2>Watch out For:</h2>
-    <div class="video-wrapper">
-        <video autoplay loop muted>
-            <source src="vidVirus.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+  <!-- Watch Out For Section -->
+  <div class="container py-5 text-center">
+    <h2>Watch out For:</h2>
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <video autoplay loop muted class="img-fluid rounded">
+          <source src="vidVirus.mp4" type="video/mp4">
+          Your browser does not support the video tag.
         </video>
+      </div>
+      <div class="col-md-6">
+        <h1 class="title text-danger">HMPV</h1>
+      </div>
     </div>
-    <div class="title-wrapper">
-        <h1 class="title">HMPV</h1>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="py-4 bg-dark text-light">
+    <div class="container text-center">
+      <p>&copy; 2025 North South University Public Health and Sciences Club</p>
+      <p>
+        Follow us on 
+        <a href="https://facebook.com" target="_blank" class="text-info">Facebook</a>, 
+        <a href="https://instagram.com" target="_blank" class="text-info">Instagram</a>
+      </p>
+      <p>Website <a href="mailto:your-email@example.com" class="text-info">Developer</a></p>
     </div>
-</div>
+  </footer>
 
-
-
-
-
-
-
-
-
-
-
-  
-
-<!-- Footer Section -->
-<footer>
-  <div class="footer-content">
-    <p>&copy; 2025 North South University Public Health and Sciences Club</p>
-    <p>
-      Follow us on 
-      <a href="https://facebook.com" target="_blank">Facebook</a>, 
-      <a href="https://instagram.com" target="_blank">Instagram</a>
-    </p>
-  </div>
-  <div class="developer-info">
-    <p>Website <a href="mailto:your-email@example.com">Developer</a></p>
-  </div>
-</footer>
-
-
-
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
