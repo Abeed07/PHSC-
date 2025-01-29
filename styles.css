@@ -6,6 +6,18 @@ body, html {
   background-color: black;
 }
 
+
+
+.video-container {
+  width: 100%;
+  height: auto; /* Let the container adjust its height naturally */
+  position: relative;
+  overflow: hidden;
+  max-height: 100vh; /* Ensure it doesn't exceed the viewport */
+}
+
+
+
 /* Header Section */
 .header {
   position: fixed;
@@ -36,21 +48,23 @@ body, html {
 /* Video Section */
 .background-video {
   width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  z-index: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
+  height: auto;
+  object-fit: contain; /* Ensures the video scales proportionally */
+  position: relative; /* No absolute positioning */
+  display: block;
+  max-width: 100vw;
+  max-height: 100vh;
 }
 
 /* About Section */
 .about-club {
   background: #000000;
   color: white;
-  margin-top: 100vh; /* Push the about section below the video */
+  margin-top: 0; /* Removes the gap */
+  padding-top: 100px; /* Adds space between video and text */
 }
+
+
 
 .about-club h2 {
   font-size: 2.5em;
@@ -88,6 +102,7 @@ body, html {
 /* Affiliates Section */
 .affiliates-section img {
   transition: transform 0.3s ease;
+  color: white;
 }
 
 .affiliates-section img:hover {
@@ -109,31 +124,120 @@ footer a:hover {
   text-decoration: underline;
 }
 
+
+
+
 /* Responsive Styles */
 @media (max-width: 767px) {
+
+
+
+  .video-container {
+    height: auto; /* Let video resize naturally */
+  }
+  /* Centering the logo */
   .logo img {
-    height: 60px; /* Adjust logo size on mobile */
+    height: 50px; /* Adjust logo size */
   }
 
-  .background-video {
-    height: auto;
-    min-height: 100vh;
+  /* Hide the menu on mobile */
+  .menu {
+    display: none;
   }
+
+  /* Make the dropdown menu visible on mobile */
+  .dropdown {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .dropdown-menu {
+    background-color: #333;
+    border-radius: 5px;
+  }
+
+  .dropdown-menu a {
+    color: white;
+  }
+
+  .dropdown-menu a:hover {
+    background-color: #444;
+  }
+
+  /* Transparent button style */
+.btn-transparent {
+  background-color: transparent;  /* Makes the button background transparent */
+  border: none;  /* Removes the button border */
+  color: white;  /* Text color */
+  padding: 10px 20px;  /* Adjust the padding as needed */
+  font-size: 16px;  /* Adjust font size */
+}
+
+.btn-transparent:hover {
+  background-color: rgba(255, 255, 255, 0.2);  /* Optional: Adds a slight hover effect */
+  color: #fff;  /* Keep text white on hover */
+}
+
+
+.background-video {
+  position: static; /* Avoids overlap */
+  height: auto;
+}
+
+
+.about-club {
+  padding-top: 50px; /* Adjust spacing */
+}
+
+
+/* Desktop Menu Layout */
+@media (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-between; /* Spacing between left and right menu */
+    align-items: center;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+
+  .video-container {
+    width: 100%;
+    height: auto; /* Let the container adjust its height naturally */
+    position: relative;
+    overflow: hidden;
+    max-height: 100vh; /* Ensure it doesn't exceed the viewport */
+  }
+
+ 
+}
 
   .menu li {
-    font-size: 16px; /* Adjust menu font size on mobile */
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0 15px;
   }
 
-  .about-club h2 {
-    font-size: 2em;
+  .menu li:hover {
+    text-decoration: underline;
   }
 
-  .about-club p {
-    font-size: 1em;
+  .logo {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-grow: 1; /* Ensure logo is centered */
   }
 
-  /* Ensure the logo is visible */
-  .header {
-    padding: 10px 15px;
+  .logo img {
+    height: 80px;
+    transition: height 0.3s ease;
   }
+
+
 }
