@@ -12,39 +12,73 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+
+
+
   <!-- Header Section (Overlapping the video) -->
   <header class="header">
     <div class="container d-flex justify-content-between align-items-center">
-      <ul class="menu list-unstyled d-flex">
-        <li class="mx-3">Home</li>
-        <li class="mx-3">About</li>
-      </ul>
+      
+      <!-- Logo -->
       <div class="logo">
         <img src="logo.png" alt="Club Logo" class="img-fluid">
       </div>
-      <ul class="menu list-unstyled d-flex">
+
+      <!-- Dropdown Menu for Mobile -->
+      <div class="dropdown d-block d-md-none">
+        <!-- Transparent button with dropdown -->
+        <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+          ...
+        </button>
+
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li><a class="dropdown-item" href="#">Home</a></li>
+          <li><a class="dropdown-item" href="#">About</a></li>
+          <li><a class="dropdown-item" href="#">Events</a></li>
+          <li><a class="dropdown-item" href="#">Contact</a></li>
+        </ul>
+      </div>
+      
+      <!-- Menus (Hidden on mobile, visible on desktop) -->
+      <ul class="menu list-unstyled d-flex d-none d-md-flex">
+        <li class="mx-3">Home</li>
+        <li class="mx-3">About</li>
         <li class="mx-3">Events</li>
         <li class="mx-3">Contact</li>
       </ul>
     </div>
   </header>
 
+
+
+
+
+
+
+
+
+
+
+  
+
   <!-- Background Video Section (Scrollable) -->
+   
+ <!-- Video Container -->
+<div class="video-container">
   <video class="background-video" autoplay muted loop>
     <source src="bvid.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
+</div>
+
 
   <!-- About the Club Section -->
   <div class="about-club py-5">
     <div class="container text-center">
       <h2>About Public Health & Sciences Club</h2>
       <p>
-       The Public Health and Sciences Club at North South University is committed to fostering a profound understanding of public health, scientific research, and their impact on global and local communities. Our mission is to cultivate an informed and engaged student body that actively participates in addressing the pressing health and scientific challenges of our time.
-
-Through structured discussions, research initiatives, and collaborative partnerships with industry professionals and academics, the club provides members with the opportunity to gain in-depth knowledge, develop critical skills, and contribute to evidence-based solutions that advance public health and scientific progress. We aim to bridge the gap between academic learning and real-world application, equipping our members with the tools necessary for leadership in the fields of public health, environmental science, biomedical research, and more.
-
-By promoting intellectual growth, community engagement, and a commitment to global well-being, the Public Health and Sciences Club seeks to inspire the next generation of professionals dedicated to improving health outcomes and advancing scientific discovery.
+        The Public Health & Sciences Club is a vibrant community dedicated to fostering awareness about public health and inspiring curiosity in the sciences. Our mission is to empower students with knowledge, provide a platform for impactful initiatives, and cultivate a commitment to improving the well-being of our communities.
       </p>
     </div>
   </div>
@@ -82,7 +116,7 @@ By promoting intellectual growth, community engagement, and a commitment to glob
   <!-- Affiliates Section -->
   <div class="affiliates-section py-5">
     <div class="container text-center">
-      <h2>Affiliates</h2>
+      <h2 style="color: white;">Affiliates</h2>
       <div class="row justify-content-center">
         <div class="col-md-2 mb-3">
           <img src="partner1.jpg" alt="Affiliate 1" class="img-fluid">
@@ -99,7 +133,8 @@ By promoting intellectual growth, community engagement, and a commitment to glob
 
   <!-- Watch Out For Section -->
   <div class="container py-5 text-center">
-    <h2>Watch out For:</h2>
+    <h2 style="color: white;">Watch out for:</h2>
+
     <div class="row align-items-center">
       <div class="col-md-6">
         <video autoplay loop muted class="img-fluid rounded">
@@ -119,7 +154,7 @@ By promoting intellectual growth, community engagement, and a commitment to glob
       <p>&copy; 2025 North South University Public Health and Sciences Club</p>
       <p>
         Follow us on 
-        <a href="https://facebook.com" target="_blank" class="text-info">Facebook</a>, 
+        <a href="https://www.facebook.com/nsuphsc" target="_blank" class="text-info">Facebook</a>, 
         <a href="https://instagram.com" target="_blank" class="text-info">Instagram</a>
       </p>
       <p>Website <a href="mailto:your-email@example.com" class="text-info">Developer</a></p>
